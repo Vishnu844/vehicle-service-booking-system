@@ -69,13 +69,6 @@ exports.getAllBookings = async (req, res) => {
 
 exports.updateBooking = async (req, res) => {
   try {
-    // if (Object.entries(req.body).length == 0) {
-    //   return res.status(200).json({
-    //     status: 0,
-    //     message: "No booking data for updation is found!!",
-    //     data: null,
-    //   });
-    // }
     const booking = await Booking.findByIdAndUpdate(
       req.params.bookingId,
       req.body,
